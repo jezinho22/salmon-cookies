@@ -54,6 +54,7 @@ li {
 	align-items: stretch;
 }
 .main {
+	min-height: 300px;
 }
 side {
 	min-width: 10%;
