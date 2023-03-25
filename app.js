@@ -1,3 +1,5 @@
+function gotFocus() {}
+
 const norwich = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
 const leeds = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
 const manchester = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
