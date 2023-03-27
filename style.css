@@ -86,6 +86,7 @@ hero {
 	background-color: var(--hero);
 }
 footer {
+	display: block;
 	background-color: var(--rich-black);
 	color: var(--lemon-chiffon);
 	min-height: 100px;
