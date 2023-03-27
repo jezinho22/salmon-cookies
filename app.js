@@ -1,4 +1,9 @@
-function gotFocus() {}
+function setFocus(element) {
+	let x = document.querySelector("li.gotFocus");
+	x.className = "noFocus";
+	console.log(x);
+	element.className = "gotFocus";
+}
 
 const norwich = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
 const leeds = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };

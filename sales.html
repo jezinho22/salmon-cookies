@@ -20,13 +20,15 @@
 				<h1 class="build">Cookies</h1>
 			</div>
 			<ul>
-				<a href="#home"><li>Home</li></a>
-				<a href="#cookies"><li>Cookies</li></a>
-				<a href="#stores"><li>Stores</li></a>
-				<a href="#aboutus"><li>About us</li></a>
+				<a href="#home"
+					><li class="gotFocus" onclick="setFocus(this)">Home</li></a
+				>
+				<a href="#cookies"><li onclick="setFocus(this)">Cookies</li></a>
+				<a href="#stores"><li onclick="setFocus(this)">Stores</li></a>
+				<a href="#aboutus"><li onclick="setFocus(this)">About us</li></a>
 			</ul>
 		</header>
-		<div class="container build">
+		<div class="container build" style="position: relative; top: 100px">
 			<side class="build main">Side</side>
 			<hero class="build main">
 				<section class="build" id="home">Home</section>
@@ -37,5 +39,6 @@
 			<side class="build main">Side</side>
 		</div>
 		<footer class="build">Footer</footer>
+		<script src="app.js"></script>
 	</body>
 </html>
