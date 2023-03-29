@@ -124,11 +124,12 @@ p {
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	transition: transform 0.8s;
+
+	transition: transform 0.4s;
 	transform-style: preserve-3d;
 }
-.flippable:hover .flippable_inner {
-	transform: rotateY(180deg);
+.flippable.is-flipped .flippable_inner {
+	transform: rotateY(180deg) translateX(-110%);
 }
 /* Position the front and back side */
 .flippable_front,

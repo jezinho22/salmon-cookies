@@ -1,9 +1,16 @@
+// switch menu tabs
 function setFocus(element) {
 	let x = document.querySelector("li.gotFocus");
 	x.className = "noFocus";
 	console.log(x);
 	element.className = "gotFocus";
 }
+// flip cards
+var flipCard = document.querySelector(".flippable");
+
+flipCard.addEventListener("click", function () {
+	flipCard.classList.toggle("is-flipped");
+});
 
 const norwich = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
 const leeds = { minCustomers: 0, maxCustomers: 0, CookiesPerCust: 0 };
