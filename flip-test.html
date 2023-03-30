@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="flip-style.css" />
+		<style>
+			body {
+				background-color: darkblue;
+				color: white;
+				margin: 0;
+			}
+			.container {
+				position: relative;
+				margin: auto;
+				border: 1px solid white;
+				width: 400px;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="flippable" style="background-color: chartreuse">
+				<div class="flippable_inner">
+					<div class="flippable_front">Front</div>
+					<div class="flippable_back">Back</div>
+				</div>
+			</div>
+			<!-- <div class="card" style="rotate: 5deg"></div>
+			<div class="card" style="rotate: -10deg"></div>
+			<div class="card" style="rotate: -5deg"></div>
+			<div class="card" style="rotate: 0deg"></div> -->
+		</div>
+		<button onclick="correctAnswer()">Correct</button>
+		<button onclick="wrongAnswer()">Wrong</button>
+		<script src="flip.js"></script>
+	</body>
+</html>
