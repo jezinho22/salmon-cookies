@@ -1,10 +1,12 @@
 // flip cards
 console.log("Working");
-let flipCard = document.querySelector(".flippable");
-
-flipCard.addEventListener("click", function () {
-	flipCard.classList.toggle("is-flipped");
-});
+let flipCards = document.querySelectorAll(".flippable");
+for (let i = 0; i < flipCards.length; i++) {
+	console.log("add event listener");
+	flipCards[i].addEventListener("click", function () {
+		flipCards[i].classList.toggle("is-flipped");
+	});
+}
 
 function correctAnswer() {
 	console.log("Correct working");
