@@ -27,7 +27,35 @@ const tableElement = document.getElementById("sales-table");
 
 // get hold of your form element by it's id
 const storesFormEl = document.getElementById("stores");
+console.log(storesFormEl.textContent);
 
+storesFormEl.addEventListener("submit", function (event) {
+	event.preventDefault();
+	console.log("Working");
+	// get the values from the inputs
+	const locationName = event.target.locationName.value;
+	const minCustPerHour = event.target.minCustPerHour.value;
+	const maxCustPerHour = event.target.maxCustPerHour.value;
+	const avgCookiePerSale = event.target.avgCookiePerSale.value;
+
+	// plug into constructor
+	const newStore = new CookieStand(
+		locationName,
+		minCustPerHour,
+		maxCustPerHour,
+		avgCookiePerSale
+	);
+	state.allCookieStands.push(newStore);
+	// //delete existing rendering
+	// let oldTable = document.getElementById("sales-table");
+	// oldTable.remove();
+	// // create and append new one
+	// let newTableSpace = document.getElementById("table-space");
+	// let newTable = document.createElement("table");
+	// newTable.setAttribute("id", "sales-table");
+	// newTableSpace.appendChild(newTable);
+	renderTable();
+});
 const state = {
 	allCookieStands: [],
 };
