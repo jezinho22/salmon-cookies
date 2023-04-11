@@ -54,7 +54,14 @@ storesFormEl.addEventListener("submit", function (event) {
 	// let newTable = document.createElement("table");
 	// newTable.setAttribute("id", "sales-table");
 	// newTableSpace.appendChild(newTable);
-	renderTable();
+
+	// remove last row from table
+	let rows = tableElement.querySelectorAll("tr");
+	let lastRow = rows[rows.length - 1];
+	lastRow.remove();
+	newStore.render();
+	makeFooterRow();
+	//renderTable();
 });
 const state = {
 	allCookieStands: [],
@@ -183,7 +190,11 @@ function makeFooterRow() {
 	tableRow.appendChild(tableHeader);
 	tableElement.appendChild(tableRow);
 }
-
+// call header row in open script
+// copy the relevant part into the event listener
+// to render extra row
+// copy part of makeFooterRow to change values of cells
+// rather than create them
 function renderTable() {
 	makeHeaderRow();
 	for (let i = 0; i < state.allCookieStands.length; i++) {
