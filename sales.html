@@ -33,22 +33,52 @@
 			<hero class="build main">
 				<section class="build" id="home">Home</section>
 
-				<section class="build" id="cookies" style="display: flex">
-					<div class="flippable" style="align-self: center">
-						<div class="flippable_inner">
-							<div class="flippable_front">
-								I am the front of a flippable card
-							</div>
-							<div class="flippable_back">
-								I am the back of a flippable card
-							</div>
-						</div>
-					</div>
+			
 				</section>
 
 				<section class="build" id="stores">
 					<h3>Stores</h3>
-					<div class="stores_container">
+					<table id="sales-table"></table>
+
+					<!-- <div class="main-container container">
+					  <h2>Seattle</h2>
+					  <ul id="seattle"></ul>
+					  <h2>Tokyo</h2>
+					  <ul id="tokyo"></ul>
+					  <h2>Dubai</h2>
+					  <ul id="dubai"></ul>
+					  <h2>Paris</h2>
+					  <ul id="paris"></ul>
+					  <h2>Lima</h2>
+					  <ul id="lima"></ul>
+					</div> -->
+					<form id="stores">
+						<fieldset>
+							<legend>Input store details</legend>
+							<label for="locationName">Location:</label>
+							<input type="text" id="locationName" name="locationName"/>
+
+							<label for="minCustPerHour">Lowest customers per hour</label>
+							<input type="text" id="minCustPerHour" name="minCustPerHour">
+
+							<label for="maxCustPerHour">Highest customers per hour</label>	
+							<input type="text" id="maxCustPerHour" name="maxCustPerHour">
+							
+							<label for="avgCookiePerSale">Average number of cookies sold per customer</label>		
+							<input type="text" id="avgCookiePerSale" name="avgCookiePerSale">
+							
+							<button type="submit">Submit</button>
+						</fieldset>
+					</form>
+					<!-- create a form to add new locations to the table. -->
+					<!-- form element -->
+					<!-- fieldset  with legend -->
+					<!-- label and inputs to take Location Name, min cust per hour, max cust per hour, avg cookies per sale -->
+					<!-- a submit button -->
+
+				</section>
+				<section class="build" id="aboutus">About us
+										<div class="stores_container">
 						<p>
 							Abalone Anchovies Barracuda Barramundi Black Cod Bombay Duck Bream
 							Brill Carp Clams Cod Coley Crab Crayfish Cuttlefish Dabs Dover
@@ -64,7 +94,6 @@
 						<img src="fish.jpg" />
 					</div>
 				</section>
-				<section class="build" id="aboutus">About us</section>
 			</hero>
 			<side class="build main">Side</side>
 		</div>
