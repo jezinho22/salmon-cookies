@@ -5,6 +5,7 @@ function setFocus(element) {
 	console.log(x);
 	element.className = "gotFocus";
 }
+
 // stores sales section
 // hours for table header
 const hours = [
@@ -89,19 +90,18 @@ function CookieStand(
 
 CookieStand.prototype.calcCustomersEachHour = function () {
 	for (let i = 0; i < hours.length; i++) {
-		this.customersEachHour.push(
-			random(this.minCustPerHour, this.maxCustPerHour)
-		);
+		let randomCust = random(this.minCustPerHour, this.maxCustPerHour)
+		this.customersEachHour.push(randomCust)
 	}
 };
 
 CookieStand.prototype.calcCookiesEachhour = function () {
 	for (let i = 0; i < hours.length; i++) {
-		const oneHour = Math.ceil(
+		const eachHour = Math.ceil(
 			this.customersEachHour[i] * this.avgCookiePerSale
 		);
-		this.cookiesEachHour.push(oneHour);
-		this.totalDailySales += oneHour;
+		this.cookiesEachHour.push(eachHour);
+		this.totalDailySales += eachHour;
 	}
 };
 
@@ -204,3 +204,4 @@ function renderTable() {
 }
 
 renderTable();
+
